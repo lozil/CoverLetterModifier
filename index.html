@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Text Replacement Tool</title>
+    <title>Cover Letter Modifier</title>
     <meta name="description"
-        content="A powerful tool to create dynamic text templates with placeholder replacements and PDF export functionality.">
-    <meta name="keywords" content="text replacement, template, placeholder, PDF generator, dynamic text">
-    <meta name="author" content="Text Replacement Tool">
+        content="Quickly personalize and tailor your cover letters using smart placeholders and export to PDF.">
+    <meta name="keywords" content="cover letter, template, placeholder, job application, PDF generator">
+    <meta name="author" content="Cover Letter Modifier">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
@@ -16,16 +16,16 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="">
-    <meta property="og:title" content="Dynamic Text Replacement Tool">
+    <meta property="og:title" content="Cover Letter Modifier">
     <meta property="og:description"
-        content="Create dynamic text templates with placeholder replacements and export to PDF.">
+        content="Quickly personalize and tailor your cover letters using smart placeholders and export to PDF.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="">
-    <meta property="twitter:title" content="Dynamic Text Replacement Tool">
+    <meta property="twitter:title" content="Cover Letter Modifier">
     <meta property="twitter:description"
-        content="Create dynamic text templates with placeholder replacements and export to PDF.">
+        content="Quickly personalize and tailor your cover letters using smart placeholders and export to PDF.">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
@@ -37,19 +37,19 @@
 <body>
     <div class="container">
         <header>
-            <h1>✨ Dynamic Text Replacement</h1>
-            <p class="subtitle">Create dynamic text templates with placeholder replacements</p>
+            <h1>📄 Cover Letter Modifier</h1>
+            <p class="subtitle">Easily personalize your cover letter with dynamic placeholders</p>
         </header>
 
         <main>
             <section class="input-section">
-                <label for="inputText">Enter your text with placeholders:</label>
+                <label for="inputText">Paste your cover letter template with placeholders:</label>
                 <textarea id="inputText"
-                    placeholder="Enter text with {placeholder} markers. Example: Hello {name}, welcome to {place}!"
+                    placeholder="Example: Dear {recruiter_name}, I am excited to apply for the {job_title} role at {company_name}..."
                     aria-describedby="input-help"></textarea>
                 <div id="input-help" class="example-text">
-                    <strong>Example:</strong> "Hello {name}, welcome to {place}! Today is {day} and the weather is
-                    {weather}."
+                    <strong>Example:</strong> "Dear {recruiter_name}, I am excited to apply for the {job_title} role at
+                    {company_name}. I bring {years_experience} years of experience in {domain}."
                 </div>
             </section>
 
@@ -59,22 +59,22 @@
             </section>
 
             <section class="output-section">
-                <h2>📝 Final Text</h2>
+                <h2>📝 Final Cover Letter</h2>
                 <div id="outputText" class="output-text no-text" role="region" aria-live="polite">
-                    Enter text with placeholders above to see the result here...
+                    Enter your template above and fill in the placeholders to see the final letter here...
                 </div>
                 <div class="output-controls">
                     <button id="downloadBtn" class="download-btn" onclick="downloadPDF()"
                         aria-describedby="download-help">
                         📄 Download as PDF
                     </button>
-                    <div id="download-help" class="sr-only">Downloads the final text as a PDF document</div>
+                    <div id="download-help" class="sr-only">Downloads the final letter as a PDF document</div>
                 </div>
             </section>
         </main>
 
         <footer>
-            <p>&copy; 2025 Dynamic Text Replacement Tool. Built with ❤️ for productivity.</p>
+            <p>&copy; 2025 Cover Letter Modifier. Built with ❤️ to help you get hired.</p>
         </footer>
     </div>
 
