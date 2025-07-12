@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Text Replacement Tool</title>
+    <meta name="description"
+        content="A powerful tool to create dynamic text templates with placeholder replacements and PDF export functionality.">
+    <meta name="keywords" content="text replacement, template, placeholder, PDF generator, dynamic text">
+    <meta name="author" content="Text Replacement Tool">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="Dynamic Text Replacement Tool">
+    <meta property="og:description"
+        content="Create dynamic text templates with placeholder replacements and export to PDF.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="">
+    <meta property="twitter:title" content="Dynamic Text Replacement Tool">
+    <meta property="twitter:description"
+        content="Create dynamic text templates with placeholder replacements and export to PDF.">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ Dynamic Text Replacement</h1>
+            <p class="subtitle">Create dynamic text templates with placeholder replacements</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <label for="inputText">Enter your text with placeholders:</label>
+                <textarea id="inputText"
+                    placeholder="Enter text with {placeholder} markers. Example: Hello {name}, welcome to {place}!"
+                    aria-describedby="input-help"></textarea>
+                <div id="input-help" class="example-text">
+                    <strong>Example:</strong> "Hello {name}, welcome to {place}! Today is {day} and the weather is
+                    {weather}."
+                </div>
+            </section>
+
+            <section class="replacements-section" id="replacementsSection">
+                <h2>Fill in the placeholders:</h2>
+                <div id="replacementFields" role="group" aria-label="Replacement fields"></div>
+            </section>
+
+            <section class="output-section">
+                <h2>📝 Final Text</h2>
+                <div id="outputText" class="output-text no-text" role="region" aria-live="polite">
+                    Enter text with placeholders above to see the result here...
+                </div>
+                <div class="output-controls">
+                    <button id="downloadBtn" class="download-btn" onclick="downloadPDF()"
+                        aria-describedby="download-help">
+                        📄 Download as PDF
+                    </button>
+                    <div id="download-help" class="sr-only">Downloads the final text as a PDF document</div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Dynamic Text Replacement Tool. Built with ❤️ for productivity.</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
