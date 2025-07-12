@@ -302,3 +302,38 @@ footer {
         font-size: 14px;
     }
 }
+
+#outputText {
+    white-space: pre-wrap;
+    text-align: left;
+
+}
+
+.helper-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #4a5568;
+}
+
+.example-preview.collapsed {
+    max-height: 3.5em;
+    /* ~2 lines */
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.3s ease;
+}
+
+.toggle-example-btn {
+    background: none;
+    border: none;
+    color: #667eea;
+    cursor: pointer;
+    padding: 5px 0;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.toggle-example-btn:hover {
+    text-decoration: underline;
+}

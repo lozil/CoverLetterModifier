@@ -301,6 +301,14 @@ function init() {
     inputText.addEventListener('blur', () => {
         inputText.parentElement.style.transform = 'scale(1)';
     });
+
+    const examplePreview = document.getElementById('examplePreview');
+    const toggleExampleBtn = document.getElementById('toggleExampleBtn');
+
+    toggleExampleBtn.addEventListener('click', () => {
+        examplePreview.classList.toggle('collapsed');
+        toggleExampleBtn.textContent = examplePreview.classList.contains('collapsed') ? 'Show more' : 'Show less';
+    });
 }
 
 // Initialize when DOM is loaded

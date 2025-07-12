@@ -45,16 +45,32 @@
             <section class="input-section">
                 <label for="inputText">Paste your cover letter template with placeholders:</label>
                 <textarea id="inputText"
-                    placeholder="Example: Dear {recruiter_name}, I am writing to express my keen interest in the {job_title} position at {company_name}. With over {years_experience} years of experience in {domain}, I am confident in my ability to contribute meaningfully."
+                    placeholder="Example: Dear {recruiter_name}, I am writing to express my interest in the {job_title} role at {company_name}. I have over {years_experience} years of experience in {domain}."
                     aria-describedby="input-help"></textarea>
                 <div id="input-help" class="example-text">
-                    <strong>Example:</strong> "Dear {recruiter_name}, I am writing to express my keen interest in the
-                    {job_title}
-                    position at {company_name}. With over {years_experience} years of experience in {domain}, I am
-                    confident in my
-                    ability to contribute meaningfully to your team."
+                    <strong>Example:</strong>
+                    <div id="examplePreview" class="example-preview collapsed">
+                        Dear {recruiter_name}, I am writing to express my keen interest in the {job_title} position at
+                        {company_name}.
+                        With over {years_experience} years of professional experience in {domain}, I have developed a
+                        strong foundation
+                        in delivering results that align with both business and technical goals. My background in
+                        {relevant_skills_or_fields}
+                        has equipped me with the tools to contribute meaningfully to your team. I am particularly drawn
+                        to {company_name}'s
+                        commitment to {company_value_or_initiative}, and I am confident that my experience and
+                        enthusiasm make me a strong
+                        fit for this role.
+                    </div>
+                    <button id="toggleExampleBtn" type="button" class="toggle-example-btn">Show more</button>
                 </div>
+                <p class="helper-text">
+                    Once you paste your template, all placeholders like <code>{recruiter_name}</code> and
+                    <code>{job_title}</code> will automatically appear as input fields below. Fill them out to generate
+                    your personalized cover letter.
+                </p>
             </section>
+
 
             <section class="replacements-section" id="replacementsSection">
                 <h2>Fill in the placeholders:</h2>
