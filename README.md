@@ -1,6 +1,6 @@
-# Dynamic Text Replacement Tool
+# Dynamic Text Replacement Tool [Cover Letter Modifier] A Vibe Coding Experiment
 
-A powerful web application that allows users to create dynamic text templates with placeholder replacements and export functionality to PDF.
+A powerful web application that allows users to create dynamic text templates with placeholder replacements and export functionality to PDF. 
 
 ## Features
 
@@ -147,4 +147,4 @@ For issues or questions:
 
 ---
 
-**Built with ❤️ for productivity and efficiency**
+**Built from boredom with ❤️ for productivity and efficiency**
