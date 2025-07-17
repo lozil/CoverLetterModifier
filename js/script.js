@@ -204,7 +204,7 @@ function downloadPDF() {
 
         // Generate filename with timestamp
         const timestamp = new Date().toISOString().slice(0, 19).replace(/:/g, '-');
-        const filename = `Cover-Letter-${timestamp}.pdf`;
+        const filename = `Pdf-Letter-${timestamp}.pdf`;
 
         doc.save(filename);
 
