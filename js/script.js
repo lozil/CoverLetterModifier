@@ -152,18 +152,18 @@ function downloadPDF() {
         const doc = new jsPDF();
         const pageWidth = doc.internal.pageSize.getWidth();
         const pageHeight = doc.internal.pageSize.getHeight();
-        const margin = 20;
+        const margin = 15; // slightly smaller margin
         const maxWidth = pageWidth - 2 * margin;
 
         // Set font
         doc.setFont('helvetica', 'normal');
-        doc.setFontSize(12);
+        doc.setFontSize(10); // smaller font size
 
         // Split text into lines that fit the page width
         const lines = doc.splitTextToSize(plainText, maxWidth);
 
         let yPosition = margin;
-        const lineHeight = 7;
+        const lineHeight = 5.5; // tighter line spacing
 
         lines.forEach((line, index) => {
             // Check if we need a new page
@@ -205,7 +205,6 @@ function downloadPDF() {
         // Generate filename with timestamp
         const timestamp = new Date().toISOString().slice(0, 19).replace(/:/g, '-');
         const filename = `Pdf-Letter-${timestamp}.pdf`;
-
         doc.save(filename);
 
         // Show success message
