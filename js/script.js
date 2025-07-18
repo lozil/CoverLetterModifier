@@ -97,6 +97,16 @@ function getPlainText() {
 }
 
 /**
+ * Convert URLs in text to clickable HTML links
+ * @param {string} text
+ * @returns {string}
+ */
+function linkify(text) {
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    return text.replace(urlRegex, url => `<a href="${url}" target="_blank" rel="noopener">${url}</a>`);
+}
+
+/**
  * Update the output display
  */
 function updateOutput() {
@@ -119,6 +129,9 @@ function updateOutput() {
             text = text.replace(regex, `<span class="placeholder">{${placeholder}}</span>`);
         }
     });
+
+    // Make URLs clickable in the preview
+    text = linkify(text);
 
     outputText.innerHTML = text;
     downloadBtn.disabled = false;
@@ -159,18 +172,39 @@ function downloadPDF() {
                 yPosition = margin;
             }
 
-            doc.text(line, margin, yPosition);
+            // Detect URLs in the line and make them clickable
+            const urlRegex = /(https?:\/\/[^\s]+)/g;
+            let match;
+            let lastIndex = 0;
+            let xPosition = margin;
+
+            while ((match = urlRegex.exec(line)) !== null) {
+                // Print text before the URL
+                if (match.index > lastIndex) {
+                    doc.text(line.substring(lastIndex, match.index), xPosition, yPosition);
+                    xPosition += doc.getTextWidth(line.substring(lastIndex, match.index));
+                }
+                // Print the URL as a clickable link
+                doc.textWithLink(match[0], xPosition, yPosition, { url: match[0] });
+                xPosition += doc.getTextWidth(match[0]);
+                lastIndex = urlRegex.lastIndex;
+            }
+            // Print any remaining text after the last URL
+            if (lastIndex < line.length) {
+                doc.text(line.substring(lastIndex), xPosition, yPosition);
+            }
+
+            // If no URL found, print the whole line as normal
+            if (lastIndex === 0) {
+                doc.text(line, margin, yPosition);
+            }
+
             yPosition += lineHeight;
         });
 
         // Generate filename with timestamp
         const timestamp = new Date().toISOString().slice(0, 19).replace(/:/g, '-');
-<<<<<<< Updated upstream
-        const filename = `text-replacement-${timestamp}.pdf`;
-=======
-        const filename = `pdf-Letter-${timestamp}.pdf`;
->>>>>>> Stashed changes
-
+        const filename = `Pdf-Letter-${timestamp}.pdf`;
         doc.save(filename);
 
         // Show success message
