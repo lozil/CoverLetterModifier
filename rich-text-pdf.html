@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rich Text to PDF</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Quill Rich Text Editor -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <style>
+        #editor-container { height: 300px; margin-bottom: 20px; }
+        #pdf-preview { border: 1px solid #ccc; min-height: 420px; background: #fff; margin-bottom: 20px; padding: 20px; border-radius: 8px; }
+        .page-fill-indicator { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Rich Text to PDF</h1>
+            <p class="subtitle">Paste or write rich text, preview, and export as PDF</p>
+        </header>
+        <main>
+            <section>
+                <label for="editor-container">Rich Text Editor:</label>
+                <div id="editor-container"></div>
+                <div style="margin: 15px 0;">
+                    <label for="fontSize">PDF Text Size: </label>
+                    <select id="fontSize">
+                        <option value="10">10</option>
+                        <option value="12" selected>12</option>
+                        <option value="14">14</option>
+                        <option value="16">16</option>
+                        <option value="18">18</option>
+                    </select>
+                </div>
+                <div class="page-fill-indicator">
+                    <label>Page Fill:</label>
+                    <progress id="pageFill" value="0" max="100" style="width: 200px;"></progress>
+                    <span id="pageFillText">0%</span>
+                </div>
+                <div id="pdf-preview">
+                    <em>PDF preview will appear here...</em>
+                </div>
+                <div class="output-controls">
+                    <button id="downloadPdfBtn" class="download-btn">Download as PDF</button>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; Built for productivity and efficiency</p>
+        </footer>
+    </div>
+    <!-- Quill.js -->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/rich-text-pdf.js"></script>
+</body>
+</html> 

@@ -1,104 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cover Letter Modifier</title>
-    <meta name="description"
-        content="Quickly personalize and tailor your cover letters using smart placeholders and export to PDF.">
-    <meta name="keywords" content="cover letter, template, placeholder, job application, PDF generator">
-    <meta name="author" content="Cover Letter Modifier">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:title" content="Cover Letter Modifier">
-    <meta property="og:description"
-        content="Quickly personalize and tailor your cover letters using smart placeholders and export to PDF.">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="">
-    <meta property="twitter:title" content="Cover Letter Modifier">
-    <meta property="twitter:description"
-        content="Quickly personalize and tailor your cover letters using smart placeholders and export to PDF.">
-
-    <!-- Stylesheets -->
+    <title>Document Tools Landing Page</title>
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- External Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <header>
-            <h1>📄 Cover Letter Modifier</h1>
-            <p class="subtitle">Easily personalize your cover letter with dynamic placeholders</p>
-        </header>
-
-        <main>
-            <section class="input-section">
-                <label for="inputText">Paste your cover letter template with placeholders:</label>
-                <textarea id="inputText"
-                    placeholder="Example: Dear {recruiter_name}, I am writing to express my interest in the {job_title} role at {company_name}. I have over {years_experience} years of experience in {domain}."
-                    aria-describedby="input-help"></textarea>
-                <div id="input-help" class="example-text">
-                    <strong>Example:</strong>
-                    <div id="examplePreview" class="example-preview collapsed">
-                        Dear {recruiter_name}, I am writing to express my keen interest in the {job_title} position at
-                        {company_name}.
-                        With over {years_experience} years of professional experience in {domain}, I have developed a
-                        strong foundation
-                        in delivering results that align with both business and technical goals. My background in
-                        {relevant_skills_or_fields}
-                        has equipped me with the tools to contribute meaningfully to your team. I am particularly drawn
-                        to {company_name}'s
-                        commitment to {company_value_or_initiative}, and I am confident that my experience and
-                        enthusiasm make me a strong
-                        fit for this role.
-                    </div>
-                    <button id="toggleExampleBtn" type="button" class="toggle-example-btn">Show more</button>
-                </div>
-                <p class="helper-text">
-                    Once you paste your template, all placeholders like <code>{recruiter_name}</code> and
-                    <code>{job_title}</code> will automatically appear as input fields below. Fill them out to generate
-                    your personalized cover letter.
-                </p>
-            </section>
-
-
-            <section class="replacements-section" id="replacementsSection">
-                <h2>Fill in the placeholders:</h2>
-                <div id="replacementFields" role="group" aria-label="Replacement fields"></div>
-            </section>
-
-            <section class="output-section">
-                <h2>📝 Final Cover Letter</h2>
-                <div id="outputText" class="output-text no-text" role="region" aria-live="polite">
-                    Enter your template above and fill in the placeholders to see the final letter here...
-                </div>
-                <div class="output-controls">
-                    <button id="downloadBtn" class="download-btn" onclick="downloadPDF()"
-                        aria-describedby="download-help">
-                        📄 Download as PDF
-                    </button>
-                    <div id="download-help" class="sr-only">Downloads the final letter as a PDF document</div>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <p>&copy; Built from boredom with ❤️ & vibe energy for productivity and efficiency </p>
-        </footer>
+    <div class="container" style="max-width: 500px; margin-top: 80px; text-align: center;">
+        <h1>Document Tools</h1>
+        <p>Select a tool to get started:</p>
+        <div style="margin-top: 40px;">
+            <a href="cover-letter.html" class="download-btn" style="display: block; margin-bottom: 20px;">Cover Letter Modifier</a>
+            <a href="rich-text-pdf.html" class="download-btn" style="display: block;">Rich Text to PDF</a>
+        </div>
     </div>
-
-    <!-- Scripts -->
-    <script src="js/script.js"></script>
 </body>
-
 </html>
