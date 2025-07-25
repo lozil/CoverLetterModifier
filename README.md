@@ -1,124 +1,109 @@
-# Dynamic Text Replacement Tool [Cover Letter Modifier] A Vibe Coding Experiment
+# Document Tools Suite
 
-A powerful web application that allows users to create dynamic text templates with placeholder replacements and export functionality to PDF. 
+A web suite featuring two powerful tools:
+- **Cover Letter Modifier**: Personalize cover letters using dynamic placeholders and export to PDF.
+- **Rich Text to PDF**: Write or paste rich text, preview, and export as PDF with page fill and font size options.
 
-## Features
+---
 
-- **Dynamic Placeholder Detection**: Automatically detects placeholders in curly braces `{placeholder}`
-- **Real-time Field Generation**: Creates input fields for each unique placeholder
-- **Live Preview**: Shows the final text with replacements in real-time
-- **PDF Export**: One-click PDF generation with proper formatting
-- **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
-- **Accessibility**: Built with ARIA labels and keyboard navigation support
-- **Modern UI**: Clean, professional interface with smooth animations
+## Tools Overview
+
+### 1. Cover Letter Modifier
+- **Dynamic Placeholder Detection**: Detects `{placeholder}` patterns in your template.
+- **Real-time Field Generation**: Creates input fields for each unique placeholder.
+- **Live Preview**: Shows the final text with replacements in real-time.
+- **PDF Export**: One-click PDF generation.
+
+### 2. Rich Text to PDF
+- **Rich Text Editor**: Format, paste, or write rich text (bold, lists, etc.).
+- **PDF Preview**: See a live preview of your text as it would appear in the PDF.
+- **Page Fill Indicator**: Visual indicator of how much of a PDF page is filled.
+- **Font Size Selection**: Choose the text size for your PDF.
+- **PDF Export**: Download your formatted text as a PDF.
+
+---
 
 ## How to Use
 
-1. **Enter Text**: Type or paste your text with placeholders in curly braces
-   - Example: `Hello {name}, welcome to {place}!`
+### Landing Page
+Open `index.html` to choose between the two tools:
+- **Cover Letter Modifier** (`cover-letter.html`)
+- **Rich Text to PDF** (`rich-text-pdf.html`)
 
-2. **Fill Placeholders**: Input fields will automatically appear for each placeholder
-   - Enter the replacement text for each placeholder
+### Cover Letter Modifier
+1. Paste your cover letter template with placeholders (e.g., `{job_title}`).
+2. Fill in the generated input fields for each placeholder.
+3. See the personalized letter update live.
+4. Download as PDF.
 
-3. **Preview**: See the final text with all replacements applied in real-time
+### Rich Text to PDF
+1. Write or paste your rich text in the editor (supports formatting).
+2. Select your desired PDF text size.
+3. Watch the page fill indicator to see how much of a PDF page your text will use.
+4. Download as PDF.
 
-4. **Export**: Click "Download as PDF" to generate and download a PDF file
+---
 
 ## Installation & Deployment
 
-### Quick Deployment
-
-1. **Download/Clone** the project files
-2. **Upload** the entire folder to your web server
-3. **Access** via your domain (e.g., `https://yourdomain.com/text-replacement-tool/`)
+1. **Download/Clone** the project files.
+2. **Upload** the folder to your web server.
+3. **Access** via your domain (e.g., `https://yourdomain.com/`).
 
 ### File Structure
-
 ```
-text-replacement-tool/
-├── index.html          # Main HTML file
+CoverLetter/
+├── index.html            # Landing page
+├── cover-letter.html     # Cover Letter Modifier tool
+├── rich-text-pdf.html    # Rich Text to PDF tool
 ├── css/
-│   └── style.css       # Stylesheet
+│   └── style.css         # Shared stylesheet
 ├── js/
-│   └── script.js       # JavaScript functionality
+│   ├── script.js         # Cover Letter Modifier JS
+│   └── rich-text-pdf.js  # Rich Text to PDF JS
 ├── assets/
-│   └── favicon.ico     # Website icon
-├── README.md           # This file
-└── .htaccess          # Apache configuration (optional)
+│   └── favicon.ico       # Website icon
+├── README.md             # This file
+└── .htaccess             # Apache config (optional)
 ```
 
 ### Server Requirements
-
-- **Web Server**: Apache, Nginx, or any static file server
-- **HTTPS**: Recommended for production
+- **Web Server**: Any static file server (Apache, Nginx, etc.)
 - **No Backend**: Pure client-side application
 
-### Supported Browsers
-
-- Chrome 60+
-- Firefox 55+
-- Safari 12+
-- Edge 79+
+---
 
 ## Technical Details
 
 ### Dependencies
-
-- **jsPDF**: For PDF generation (loaded via CDN)
+- **jsPDF**: For PDF generation (CDN)
+- **Quill.js**: Rich text editor for the Rich Text to PDF tool (CDN)
 - **Pure HTML/CSS/JS**: No frameworks required
 
 ### Features
+- **Responsive Design**: Mobile-first
+- **Accessibility**: ARIA labels, keyboard navigation
+- **Performance**: Lightweight and fast
 
-- **Responsive Design**: Mobile-first approach
-- **Accessibility**: WCAG 2.1 AA compliant
-- **Performance**: Lightweight and fast loading
-- **SEO**: Proper meta tags and semantic HTML
-
-### Customization
-
-#### Styling
-Edit `css/style.css` to customize:
-- Colors and gradients
-- Typography
-- Layout and spacing
-- Animations
-
-#### Functionality
-Edit `js/script.js` to modify:
-- Placeholder detection regex
-- PDF formatting options
-- Additional features
+---
 
 ## Examples
 
-### Basic Usage
+### Cover Letter Modifier
 ```
 Input: "Dear {customer_name}, your order #{order_id} is ready!"
 Fields: customer_name, order_id
 Output: "Dear John Doe, your order #12345 is ready!"
 ```
 
-### Advanced Templates
-```
-Input: "Invoice for {client_name}
-Date: {date}
-Amount: ${amount}
-Due: {due_date}
+### Rich Text to PDF
+- Paste or write formatted text (bold, lists, etc.)
+- Select font size and see how much of a PDF page is filled
+- Download as PDF
 
-Thank you for your business!"
-```
-
-## Browser Support
-
-| Browser | Version | Status |
-|---------|---------|--------|
-| Chrome  | 60+     | ✅ Full |
-| Firefox | 55+     | ✅ Full |
-| Safari  | 12+     | ✅ Full |
-| Edge    | 79+     | ✅ Full |
+---
 
 ## Contributing
-
 1. Fork the repository
 2. Create your feature branch
 3. Commit your changes
@@ -126,24 +111,12 @@ Thank you for your business!"
 5. Create a Pull Request
 
 ## License
-
-This project is open source and available under the [MIT License](LICENSE).
+Open source under the [MIT License](LICENSE).
 
 ## Support
-
-For issues or questions:
 - Create an issue in the repository
 - Check the documentation
 - Review the code comments
-
-## Changelog
-
-### v1.0.0 (2025-07-12)
-- Initial release
-- Dynamic placeholder detection
-- PDF export functionality
-- Responsive design
-- Accessibility features
 
 ---
 
