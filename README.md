@@ -1,14 +1,14 @@
-# Document Tools Suite
+# Smart Text Replacer Suite
 
 A web suite featuring two powerful tools:
-- **Cover Letter Modifier**: Personalize cover letters using dynamic placeholders and export to PDF.
+- **Smart Text Replacer**: Personalize any text template using smart placeholders and export to PDF.
 - **Rich Text to PDF**: Write or paste rich text, preview, and export as PDF with page fill and font size options.
 
 ---
 
 ## Tools Overview
 
-### 1. Cover Letter Modifier
+### 1. Smart Text Replacer
 - **Dynamic Placeholder Detection**: Detects `{placeholder}` patterns in your template.
 - **Real-time Field Generation**: Creates input fields for each unique placeholder.
 - **Live Preview**: Shows the final text with replacements in real-time.
@@ -27,13 +27,13 @@ A web suite featuring two powerful tools:
 
 ### Landing Page
 Open `index.html` to choose between the two tools:
-- **Cover Letter Modifier** (`cover-letter.html`)
+- **Smart Text Replacer** (`smart-text-replacer.html`)
 - **Rich Text to PDF** (`rich-text-pdf.html`)
 
-### Cover Letter Modifier
-1. Paste your cover letter template with placeholders (e.g., `{job_title}`).
+### Smart Text Replacer
+1. Paste your text template with placeholders (e.g., `{recipient_name}`).
 2. Fill in the generated input fields for each placeholder.
-3. See the personalized letter update live.
+3. See the personalized text update live.
 4. Download as PDF.
 
 ### Rich Text to PDF
@@ -52,19 +52,19 @@ Open `index.html` to choose between the two tools:
 
 ### File Structure
 ```
-CoverLetter/
-├── index.html            # Landing page
-├── cover-letter.html     # Cover Letter Modifier tool
-├── rich-text-pdf.html    # Rich Text to PDF tool
+SmartTextReplacer/
+├── index.html               # Landing page
+├── smart-text-replacer.html # Smart Text Replacer tool
+├── rich-text-pdf.html       # Rich Text to PDF tool
 ├── css/
-│   └── style.css         # Shared stylesheet
+│   └── style.css            # Shared stylesheet
 ├── js/
-│   ├── script.js         # Cover Letter Modifier JS
-│   └── rich-text-pdf.js  # Rich Text to PDF JS
+│   ├── script.js            # Smart Text Replacer JS
+│   └── rich-text-pdf.js     # Rich Text to PDF JS
 ├── assets/
-│   └── favicon.ico       # Website icon
-├── README.md             # This file
-└── .htaccess             # Apache config (optional)
+│   └── favicon.ico          # Website icon
+├── README.md                # This file
+└── .htaccess                # Apache config (optional)
 ```
 
 ### Server Requirements
@@ -89,7 +89,7 @@ CoverLetter/
 
 ## Examples
 
-### Cover Letter Modifier
+### Smart Text Replacer
 ```
 Input: "Dear {customer_name}, your order #{order_id} is ready!"
 Fields: customer_name, order_id
@@ -120,4 +120,4 @@ Open source under the [MIT License](LICENSE).
 
 ---
 
-**Built from boredom with ❤️ for productivity and efficiency**
+**Built for productivity and efficiency**
