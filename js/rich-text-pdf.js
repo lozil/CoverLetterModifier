@@ -15,8 +15,16 @@ function estimatePageFill(text, fontSize) {
 function updatePreviewAndFill() {
     const html = quill.root.innerHTML;
     const text = quill.getText();
-    // Update preview
-    document.getElementById('pdf-preview').innerHTML = html.trim() ? html : '<em>PDF preview will appear here...</em>';
+    
+    // Update preview with font size applied
+    const previewElement = document.getElementById('pdf-preview');
+    if (html.trim()) {
+        // Create a wrapper div with the selected font size
+        previewElement.innerHTML = `<div style="font-size: ${fontSize}px; line-height: 1.4;">${html}</div>`;
+    } else {
+        previewElement.innerHTML = '<em>PDF preview will appear here...</em>';
+    }
+    
     // Update page fill
     const percent = estimatePageFill(text, fontSize);
     document.getElementById('pageFill').value = percent;
